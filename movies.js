@@ -18,7 +18,7 @@ $(function() {
   });
 
 
-  $("tbody").on("click", ".delete", function(e) {
+  $("tbody").on("click", ".btn.btn-danger", function(e) {
     
     let removeIndex = movieList.findIndex(movie => movie.id === +$(e.target).data("deleteId"))
     
@@ -38,7 +38,7 @@ function addToList(movie) {
       <td>${movie.title}</td>
       <td>${movie.rating}</td>
       <td>
-        <button class="delete" data-delete-id=${movie.id}>
+        <button class="btn btn-danger" data-delete-id=${movie.id}>
           Delete
         </button>
       </td>
